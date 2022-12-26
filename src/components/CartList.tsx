@@ -8,8 +8,8 @@ export default function CartList() {
   const cart = useSelector((state: any) => state.cartSlice.productlist);
 
   let zero = 0;
-  let pricearr = cart.map((i: any) => i.totalPrice);
-  let total = pricearr.reduce((a: number, b: number) => a + b, zero);
+  const priceArr = cart.map((i: any) => i.totalPrice);
+  let total = priceArr.reduce((a: number, b: number) => a + b, zero);
   // console.log(total);
 
   const dispatch = useDispatch();

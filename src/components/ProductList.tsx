@@ -32,9 +32,7 @@ export default function ProductList() {
     }
   `;
 
-  return isLoading === "loading" ? (
-    <Loading />
-  ) : (
+  return isLoading === "success" ? (
     <>
       <div className="pt-12 pb-8 px-2">
         <h1 className="text-center text-4xl font-bold mb-8">패션</h1>
@@ -110,5 +108,7 @@ export default function ProductList() {
         </div>
       </div>
     </>
+  ) : (
+    <Loading />
   );
 }
